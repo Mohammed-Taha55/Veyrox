@@ -175,7 +175,7 @@ const Footer = () => {
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-gray-700">© 2025 Veyrox Inc. All rights reserved.</p>
           <div className="flex items-center gap-1.5">
-            <div className="w-1.5 h-1.5 rounded-full bg-green-500" style={{ boxShadow: '0 0 6px #22c55e' }} />
+            <div className="w-1.5 h-1.5 rounded-full bg-[#ff9900]" style={{ boxShadow: '0 0 6px #22c55e' }} />
             <p className="text-xs text-gray-700">Designed by Taha</p>
           </div>
         </div>
