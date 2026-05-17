@@ -143,29 +143,32 @@ const Footer = () => {
               <p className="text-white font-semibold text-sm mb-1">Stay ahead of threats.</p>
               <p className="text-gray-500 text-xs">Get security insights and product updates in your inbox.</p>
             </div>
-            <form onSubmit={handleSubmit} className="flex gap-2 flex-1 md:max-w-md">
-              {submitted ? (
-                <div className="flex-1 flex items-center gap-2 text-green-400 text-sm">
-                  <Shield size={16} /> You're subscribed — stay safe out there!
-                </div>
-              ) : (
-                <>
-                  <input
-                    type="email" required value={email} onChange={e => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    className="flex-1 px-4 py-2.5 rounded-full text-sm text-white placeholder-gray-600 outline-none transition-all duration-300"
-                    style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)' }}
-                    onFocus={e => e.target.style.borderColor = 'rgba(255,176,0,0.4)'}
-                    onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-                  />
-                  <button type="submit"
-                    className="px-5 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 transition-all duration-300 hover:scale-105 flex-shrink-0"
-                    style={{ background: 'linear-gradient(135deg, #FFB000, #FF7700)', color: '#060605' }}>
-                    Subscribe <ArrowRight size={13} />
-                  </button>
-                </>
-              )}
-            </form>
+<form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 flex-1 w-full max-w-full md:max-w-md">
+  {submitted ? (
+    <div className="flex-1 flex items-center gap-2 text-green-400 text-sm">
+      <Shield size={16} /> You're subscribed — stay safe out there!
+    </div>
+  ) : (
+    <>
+      <input
+        type="email" 
+        required 
+        value={email} 
+        onChange={e => setEmail(e.target.value)}
+        placeholder="Enter your email"
+        className="w-full px-4 py-2.5 rounded-full text-sm text-white placeholder-gray-600 outline-none transition-all duration-300"
+        style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)' }}
+        onFocus={e => e.target.style.borderColor = 'rgba(255,176,0,0.4)'}
+        onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+      />
+      <button type="submit"
+        className="w-full sm:w-auto justify-center px-5 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 transition-all duration-300 hover:scale-105 flex-shrink-0"
+        style={{ background: 'linear-gradient(135deg, #FFB000, #FF7700)', color: '#060605' }}>
+        Subscribe <ArrowRight size={13} />
+      </button>
+    </>
+  )}
+</form>
           </div>
         </div>
       </div>
