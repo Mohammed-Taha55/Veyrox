@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ========================================
+   VEYROX — Global Design System
+   ======================================== */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #060605;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ── Typography ─────────────────────────── */
+
+.hero-heading {
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  font-size: clamp(3.6rem, 9vw, 7rem);
+  line-height: 0.93;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: linear-gradient(175deg, #ffffff 0%, #d0d0d0 35%, #888 65%, #4a4a4a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+}
+
+/* ── Social icon ────────────────────────── */
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.35);
+  transition: color 0.25s, border-color 0.25s, background 0.25s;
+}
+
+.social-icon:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Targeting brackets ─────────────────── */
+
+.target-bracket {
+  position: relative;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+}
+.target-bracket::before,
+.target-bracket::after {
+  content: '';
+  position: absolute;
+  width: 8px; height: 8px;
+  border: 2px solid #fff;
+}
+.target-bracket::before { top: -4px; left: -4px; border-right: none; border-bottom: none; }
+.target-bracket::after  { bottom: -4px; right: -4px; border-left: none; border-top: none; }
+
+/* ── Responsive tweaks ──────────────────── */
+
+@media (max-width: 1023px) {
+  .hero-heading { text-align: center; }
+}
+
+@media (max-width: 639px) {
+  .hero-heading { font-size: clamp(3rem, 14vw, 4.5rem); }
+}
